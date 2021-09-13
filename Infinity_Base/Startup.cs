@@ -12,6 +12,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Azure;
+using Azure.Storage.Queues;
+using Azure.Storage.Blobs;
+using Azure.Core.Extensions;
 
 namespace Infinity_Base
 {
@@ -36,6 +40,11 @@ namespace Infinity_Base
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+            services.AddAzureClients(builder =>
+            {
+                builder.AddBlobServiceClient(Configuration["DefaultEndpointsProtocol=https;AccountName=infinitybaseblobstorage;AccountKey=4kVd/hwjx603AJVT9GpmuxgM5eJQr76cRwFBUVbooS6+37WqJU22T1H6LUA/u6VSRHYL42KPvWRm9AjwAEM7nQ==;EndpointSuffix=core.windows.net:blob"], preferMsi: true);
+                builder.AddQueueServiceClient(Configuration["DefaultEndpointsProtocol=https;AccountName=infinitybaseblobstorage;AccountKey=4kVd/hwjx603AJVT9GpmuxgM5eJQr76cRwFBUVbooS6+37WqJU22T1H6LUA/u6VSRHYL42KPvWRm9AjwAEM7nQ==;EndpointSuffix=core.windows.net:queue"], preferMsi: true);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -102,6 +111,31 @@ namespace Infinity_Base
             }
 
             await UserManager.AddToRoleAsync(adminUser, "Admin");
+        }
+    }
+    internal static class StartupExtensions
+    {
+        public static IAzureClientBuilder<BlobServiceClient, BlobClientOptions> AddBlobServiceClient(this AzureClientFactoryBuilder builder, string serviceUriOrConnectionString, bool preferMsi)
+        {
+            if (preferMsi && Uri.TryCreate(serviceUriOrConnectionString, UriKind.Absolute, out Uri serviceUri))
+            {
+                return builder.AddBlobServiceClient(serviceUri);
+            }
+            else
+            {
+                return builder.AddBlobServiceClient(serviceUriOrConnectionString);
+            }
+        }
+        public static IAzureClientBuilder<QueueServiceClient, QueueClientOptions> AddQueueServiceClient(this AzureClientFactoryBuilder builder, string serviceUriOrConnectionString, bool preferMsi)
+        {
+            if (preferMsi && Uri.TryCreate(serviceUriOrConnectionString, UriKind.Absolute, out Uri serviceUri))
+            {
+                return builder.AddQueueServiceClient(serviceUri);
+            }
+            else
+            {
+                return builder.AddQueueServiceClient(serviceUriOrConnectionString);
+            }
         }
     }
 }

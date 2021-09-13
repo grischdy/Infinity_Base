@@ -5,6 +5,12 @@
       "type": "mssql.azure",
       "connectionId": "DefaultConnection",
       "secretStore": "AzureAppSettings"
+    },
+    "storage1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/infinitybaseblobstorage",
+      "type": "storage.azure",
+      "connectionId": "DefaultEndpointsProtocol=https;AccountName=infinitybaseblobstorage;AccountKey=4kVd/hwjx603AJVT9GpmuxgM5eJQr76cRwFBUVbooS6+37WqJU22T1H6LUA/u6VSRHYL42KPvWRm9AjwAEM7nQ==;EndpointSuffix=core.windows.net",
+      "secretStore": "AzureAppSettings"
     }
   }
 }

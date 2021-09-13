@@ -1,0 +1,83 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<ul class='nav'>
+    <li>
+        <div class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ansicht</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li><a asp-action="Projektleiter" asp-route-id="">Projektleiter</a></li>
+                <li><a asp-action="Hardwarekonstruktion" asp-route-id="">Hardwarekonstruktion</a></li>
+                <li><a asp-action="Softwarekonstruktion" asp-route-id="">Softwarekonstruktion</a></li>
+                <li><a asp-action="Administrator" asp-route-id="">Administrator</a></li>
+            </ul>
+        </div>
+    </li>
+</ul>
+
+<hr />
+
+<h1>Projektleiterseite</h1>
+
+<hr />
+
+<form asp-action="CreateEdit">
+    <button type="submit" class="btn btn-primary">+ Create Project</button>
+</form>
+
+
+<hr />
+
+
+<table class="table table-dark table-striped table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Projekt Nummer</th>
+            <th>Name</th>
+            <th>Kunde</th>
+            <th>Bearbeiten</th>
+            <th>Löschen</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @{ foreach (Projekt projekt in ViewBag.Projekte)
+            {
+                <tr>
+                    <td>
+                        @projekt.Id
+
+                    </td>
+                    <td>
+                        @projekt.ProjektNummer
+                    </td>
+                    <td>
+                        @projekt.Name
+                    </td>
+                    <td>
+                        @projekt.Kunde
+                    </td>
+                    <td>
+                        <form asp-action="CreateEdit" asp-route-id="@projekt.Id">
+                            <button type="submit" class="btn btn-warning">Edit</button>
+                        </form>
+
+                    </td>
+                    <td>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <form asp-action="DeleteProjekt" asp-route-id="@projekt.Id">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        }
+                    </td>
+
+                </tr>
+            }
+        }
+    </tbody>
+</table>

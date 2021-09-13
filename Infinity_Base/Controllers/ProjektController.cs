@@ -27,6 +27,41 @@ namespace Infinity_Base.Controllers
             return View();
         }
 
+        public IActionResult Projektleiter()
+        {
+            var projekte = _context.Projekte.ToList();
+
+            ViewBag.Projekte = projekte;
+
+            return View();
+        }
+        public IActionResult Hardwarekonstruktion()
+        {
+            var projekte = _context.Projekte.ToList();
+
+            ViewBag.Projekte = projekte;
+
+            return View();
+        }
+
+        public IActionResult Softwarekonstruktion()
+        {
+            var projekte = _context.Projekte.ToList();
+
+            ViewBag.Projekte = projekte;
+
+            return View();
+        }
+
+        public IActionResult Administrator()
+        {
+            var projekte = _context.Projekte.ToList();
+
+            ViewBag.Projekte = projekte;
+
+            return View();
+        }
+
         public IActionResult CreateEdit(int id)
         {
             if(id == 0)
@@ -54,7 +89,7 @@ namespace Infinity_Base.Controllers
             }
 
             _context.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Projektleiter");
         }
 
 
