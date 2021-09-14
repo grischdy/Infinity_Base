@@ -16,6 +16,12 @@ using Microsoft.Extensions.Azure;
 using Azure.Storage.Queues;
 using Azure.Storage.Blobs;
 using Azure.Core.Extensions;
+using Aml.Engine.Adapter;
+using Aml.Engine.AmlObjects;
+using Aml.Engine.CAEX;
+using Aml.Engine.CAEX.Extensions;
+using Aml.Engine.Services;
+using Aml.Engine.Xml.Extensions;
 
 namespace Infinity_Base
 {
@@ -35,12 +41,12 @@ namespace Infinity_Base
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
-
+            
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
-            services.AddAzureClients(builder =>
+            services.AddAzureClients(builder=>
             {
                 builder.AddBlobServiceClient(Configuration["DefaultEndpointsProtocol=https;AccountName=infinitybaseblobstorage;AccountKey=4kVd/hwjx603AJVT9GpmuxgM5eJQr76cRwFBUVbooS6+37WqJU22T1H6LUA/u6VSRHYL42KPvWRm9AjwAEM7nQ==;EndpointSuffix=core.windows.net:blob"], preferMsi: true);
                 builder.AddQueueServiceClient(Configuration["DefaultEndpointsProtocol=https;AccountName=infinitybaseblobstorage;AccountKey=4kVd/hwjx603AJVT9GpmuxgM5eJQr76cRwFBUVbooS6+37WqJU22T1H6LUA/u6VSRHYL42KPvWRm9AjwAEM7nQ==;EndpointSuffix=core.windows.net:queue"], preferMsi: true);

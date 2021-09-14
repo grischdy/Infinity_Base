@@ -6,6 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Aml.Engine.Adapter;
+using Aml.Engine.AmlObjects;
+using Aml.Engine.CAEX;
+using Aml.Engine.CAEX.Extensions;
+using Aml.Engine.Services;
+using Aml.Engine.Xml.Extensions;
 
 
 namespace Infinity_Base.Controllers
@@ -14,14 +20,17 @@ namespace Infinity_Base.Controllers
     public class ProjektController : Controller
     {
         private readonly ApplicationDbContext _context;
-        public ProjektController(ApplicationDbContext context)
+        private readonly CAEXDocument _myDoc;
+        public ProjektController(ApplicationDbContext context, CAEXDocument mydoc)
         {
             _context = context;
+            _myDoc = mydoc;
         }
+
+
         public IActionResult Index()
         {
             var projekte = _context.Projekte.ToList();
-
             ViewBag.Projekte = projekte;
 
             return View();
@@ -56,7 +65,6 @@ namespace Infinity_Base.Controllers
         public IActionResult Administrator()
         {
             var projekte = _context.Projekte.ToList();
-
             ViewBag.Projekte = projekte;
 
             return View();
