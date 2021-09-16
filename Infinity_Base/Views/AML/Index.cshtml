@@ -1,0 +1,111 @@
+﻿
+@using Aml.Engine.AmlObjects;
+@using Aml.Engine.CAEX;
+@using Aml.Engine.CAEX.Extensions;
+@using Aml.Engine.Services;
+@using Aml.Engine.Xml.Extensions;
+
+
+
+<ul class='nav'>
+    <li>
+        <div class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ansicht</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li><a asp-action="Projektleiter" asp-route-id="">Projektleiter</a></li>
+                <li><a asp-action="Hardwarekonstruktion" asp-route-id="">Hardwarekonstruktion</a></li>
+                <li><a asp-action="Softwarekonstruktion" asp-route-id="">Softwarekonstruktion</a></li>
+                <li><a asp-action="Administrator" asp-route-id="">Administrator</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Funktionen</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li><a asp-controller="File" asp-action="FileUpload" asp-route-id="">FileUpload</a></li>
+                <li><a asp-controller="AML" asp-action="Index" asp-route-id="">AML</a></li>
+            </ul>
+        </div>
+    </li>
+</ul>
+<hr />
+
+<form asp-action="CreateStation">
+    <button type="submit" class="btn btn-primary">+ Add Station</button>
+</form>
+<hr />
+
+<!--Erste Tabelle mit der Ausgabe der Projektbezeichnung und der Ausgabe der Anlagenbezeichnung -->
+
+<table class="table table-dark table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Projektbezeichnung</th>
+            <th>Anlagenbezeichnung</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @{foreach (InstanceHierarchyType ih1 in ViewBag.myDoc.CAEXFile.InstanceHierarchy)
+                    {
+                        <button type="submit" class="btn btn-warning">@ih1.Name</button>
+                    }
+                }
+            </td>
+            <td>
+                @{foreach (InstanceHierarchyType ih1 in ViewBag.myDoc.CAEXFile.InstanceHierarchy)
+                    {
+                        foreach (InternalElementType ih2 in ih1.InternalElement)
+                        {
+                            <button type="submit" class="btn btn-warning">@ih2.Name</button>
+                        }
+                    }
+
+                }
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!--Für jede Station eine Tabelle generieren die die Funktionsgruppen beinhaltet-->
+
+
+@{foreach (InstanceHierarchyType ih1 in ViewBag.myDoc.CAEXFile.InstanceHierarchy)
+    {
+        foreach (InternalElementType ih2 in ih1.InternalElement)
+        {
+            foreach (InternalElementType ih3 in ih2.InternalElement)
+            {
+                <table class="table table-dark table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>@ih3.Name</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        
+                    @{foreach (InternalElementType ih4 in ih3.InternalElement)
+                    {     
+                    <tr>
+                        <td>
+                            <button with="120px" type="submit" class="btn btn-warning">@ih4.Name</button>
+                            @{foreach (InternalElementType ih5 in ih4.InternalElement)
+                            {
+                            <button with="120px" type="submit" class="btn btn-success">@ih5.Name</button>
+                            }
+                            }
+                        </td>
+                    </tr>                                     
+                     }
+                     }                           
+                    </tbody>
+                </table>
+            }
+        }
+    }
+}
+
+

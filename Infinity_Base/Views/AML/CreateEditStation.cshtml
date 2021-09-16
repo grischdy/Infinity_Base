@@ -1,0 +1,28 @@
+﻿@model AML_Station
+
+
+<div class="card">
+    <div class="card-header">
+        <h5>Create or Edit an Station</h5>
+    </div>
+
+    <form asp-action="CreateEditStation" method="post">
+        <div class="card-body">
+            <div class="row">
+                <div class="col form-group">
+                    <input asp-for="Stationsnummer" placeholder="Stationsnummer" class="form-control" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col form-group">
+                    <input asp-for="Zusatzinformationen" placeholder="Zusatzinformationen" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">SAVE</button>
+        </div>
+    </form>
+
+</div>

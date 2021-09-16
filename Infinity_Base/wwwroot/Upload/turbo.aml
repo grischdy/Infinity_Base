@@ -1,0 +1,216 @@
+﻿<CAEXFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.dke.de/CAEX" SchemaVersion="3.0" FileName="turbo.aml" xsi:schemaLocation="http://www.dke.de/CAEX CAEX_ClassModel_V.3.0.xsd">
+  <AdditionalInformation AutomationMLVersion="2.0" />
+  <SuperiorStandardVersion>AutomationML 2.10</SuperiorStandardVersion>
+  <SourceDocumentInformation OriginName="AutomationML Editor" OriginID="916578CA-FE0D-474E-A4FC-9E1719892369" OriginVersion="5.5.4.0" LastWritingDateTime="2021-09-16T11:31:47.5482801+02:00" OriginVendor="AutomationML e.V." OriginVendorURL="www.AutomationML.org" OriginRelease="5.5.4.0" OriginProjectTitle="unspecified" OriginProjectID="unspecified" />
+  <InstanceHierarchy Name="DE092109001">
+    <Version>0</Version>
+    <InternalElement Name="001" ID="be8e010e-47bb-4e58-8f03-7da008e3bee3">
+      <Attribute Name="Anlagenname" AttributeDataType="xs:string" />
+      <InternalElement Name="ST0000" ID="d1988239-ba73-4d5c-a834-d6bf81effaa6">
+        <InternalElement Name="CC001" ID="1edeab97-c0ba-42b1-9720-84cd7a5ab461">
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Cabinet" />
+        </InternalElement>
+        <InternalElement Name="CD001" ID="13cbfce1-91dc-464b-8603-2993c91c64d1">
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Cabinet" />
+        </InternalElement>
+        <InternalElement Name="MS001" ID="e366577c-95d1-4cf2-a11b-f3c1b025c054">
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Media" />
+        </InternalElement>
+        <InternalElement Name="OC001" ID="82fbac9a-38f2-4638-be85-5c9ea1d2c8f7">
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Panel" />
+        </InternalElement>
+        <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
+      </InternalElement>
+      <InternalElement Name="ST0110" ID="a1aad460-d134-417f-8584-564cacc7eb65">
+        <InternalElement Name="TL001" ID="7aad62d4-088f-4e8c-b32c-b2081c85c2b0">
+          <InternalElement Name="FX001" ID="cdf8807f-b22b-45b9-9c98-63175372b132">
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Centering" />
+          </InternalElement>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
+        </InternalElement>
+        <InternalElement Name="TL002" ID="e4ea9238-d4b2-4409-aa28-8fa29dc165e7">
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
+        </InternalElement>
+        <InternalElement Name="TL003" ID="64223365-65e7-4f1f-8064-77886c785a71">
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
+        </InternalElement>
+        <InternalElement Name="TL004" ID="d85943e8-53dd-4f28-9cad-c62e22b5ee72">
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
+        </InternalElement>
+        <InternalElement Name="TL005" ID="3c88f037-48be-4c83-8939-ade2ac5d7c3a">
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
+        </InternalElement>
+        <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
+      </InternalElement>
+      <InternalElement Name="ST0120" ID="8e927812-43ee-4f85-8b6d-b98afb19a1f2">
+        <InternalElement Name="TL001" ID="d0e3abc9-0d16-492e-8b43-f78983b56efc">
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
+        </InternalElement>
+        <InternalElement Name="IR001" ID="90eb4634-3e28-4716-a35f-4d916e3ff5a9">
+          <InternalElement Name="CR001" ID="53d17f62-b94e-4b0b-b052-49b6de1541fe">
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Cabinet" />
+          </InternalElement>
+          <InternalElement Name="FG001" ID="b1dd0d9f-9533-4269-90e9-229f0a2dfb8d">
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Gripper" />
+          </InternalElement>
+          <InternalElement Name="MS001" ID="7fe7e363-ac54-4a41-95e9-bbb8591296dd">
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Media" />
+          </InternalElement>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Robot" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+        </InternalElement>
+        <InternalElement Name="IR002" ID="0be5c951-ccb3-4537-99aa-5b676ee7cd55">
+          <InternalElement Name="CR001" ID="cd7c1c1b-ff5a-4d1f-9471-4de1441c91cb">
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Cabinet" />
+          </InternalElement>
+          <InternalElement Name="FG001" ID="a7078138-c7e2-445f-82ae-c4846c9c1887">
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Gripper" />
+          </InternalElement>
+          <InternalElement Name="MS001" ID="cf569bff-5f95-4a47-8c8a-ebb45abbd084">
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Media" />
+          </InternalElement>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Robot" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+        </InternalElement>
+        <InternalElement Name="TR001" ID="d2310ffb-10a4-45a6-aa75-6cefa7349686">
+          <InternalElement Name="FX001" ID="0dd373e4-bf78-442e-a1a7-68d70b805410">
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+          </InternalElement>
+          <InternalElement Name="FX002" ID="4762f1b4-f26a-4d1b-8f87-fb5ea7b7255f">
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+          </InternalElement>
+          <InternalElement Name="FX003" ID="3b219efb-b5b6-4937-b40f-3d0f29543b3e">
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+          </InternalElement>
+          <InternalElement Name="FX004" ID="bae72f96-a3ec-42fc-8983-7364e7ec1252">
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+          </InternalElement>
+          <InternalElement Name="CN001" ID="44e99f4d-0768-49b2-a17f-257a42d2e712">
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Technology" />
+          </InternalElement>
+          <InternalElement Name="CN002" ID="c0c9661c-7378-4aa0-b091-86c0defe85b2">
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Technology" />
+          </InternalElement>
+          <InternalElement Name="ZN001" ID="dde48d72-c8e9-41ba-ab63-5fa668e31c94">
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Technology" />
+          </InternalElement>
+          <InternalElement Name="ZN002" ID="2bad7293-9f50-4152-964e-95e97c6e8002">
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Technology" />
+          </InternalElement>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+        </InternalElement>
+        <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
+      </InternalElement>
+      <InternalElement Name="ST0130" ID="3c7fcf1d-5ed8-439b-8daf-3c191600e853">
+        <InternalElement Name="TO001" ID="cd63d9ac-814e-4ab5-8520-d7dcce322128">
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
+        </InternalElement>
+        <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
+      </InternalElement>
+      <InternalElement Name="ST0140" ID="482c4076-f454-427b-ac74-1a6e7e201aa9" />
+      <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Line" />
+    </InternalElement>
+  </InstanceHierarchy>
+  <InterfaceClassLib Name="AutomationMLInterfaceClassLib">
+    <Description>Standard Automation Markup Language Interface Class Library - Part 1 Content extended with Part 3 and Part 4 Content</Description>
+    <Version>2.2.2</Version>
+    <InterfaceClass Name="AutomationMLBaseInterface">
+      <InterfaceClass Name="Order" RefBaseClassPath="AutomationMLBaseInterface">
+        <Attribute Name="Direction" AttributeDataType="xs:string" />
+      </InterfaceClass>
+      <InterfaceClass Name="PortConnector" RefBaseClassPath="AutomationMLBaseInterface" />
+      <InterfaceClass Name="InterlockingConnector" RefBaseClassPath="AutomationMLBaseInterface" />
+      <InterfaceClass Name="PPRConnector" RefBaseClassPath="AutomationMLBaseInterface" />
+      <InterfaceClass Name="ExternalDataConnector" RefBaseClassPath="AutomationMLBaseInterface">
+        <Attribute Name="refURI" AttributeDataType="xs:anyURI" />
+        <InterfaceClass Name="COLLADAInterface" RefBaseClassPath="ExternalDataConnector">
+          <Attribute Name="refType" AttributeDataType="xs:string" />
+          <Attribute Name="target" AttributeDataType="xs:token" />
+        </InterfaceClass>
+        <InterfaceClass Name="PLCopenXMLInterface" RefBaseClassPath="ExternalDataConnector">
+          <InterfaceClass Name="LogicInterface" RefBaseClassPath="PLCopenXMLInterface">
+            <InterfaceClass Name="SequencingLogicInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/PLCopenXMLInterface/LogicInterface" />
+            <InterfaceClass Name="BehaviourLogicInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/PLCopenXMLInterface/LogicInterface" />
+            <InterfaceClass Name="SequencingBehaviourLogicInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/PLCopenXMLInterface/LogicInterface" />
+            <InterfaceClass Name="InterlockingLogicInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/PLCopenXMLInterface/LogicInterface" />
+          </InterfaceClass>
+          <InterfaceClass Name="LogicElementInterface" RefBaseClassPath="PLCopenXMLInterface" />
+          <InterfaceClass Name="VariableInterface" RefBaseClassPath="PLCopenXMLInterface">
+            <InterfaceClass Name="InterlockingVariableInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/PLCopenXMLInterface/VariableInterface">
+              <Attribute Name="SafeConditionEquals" AttributeDataType="xs:boolean">
+                <DefaultValue>true</DefaultValue>
+              </Attribute>
+            </InterfaceClass>
+          </InterfaceClass>
+        </InterfaceClass>
+      </InterfaceClass>
+      <InterfaceClass Name="Communication" RefBaseClassPath="AutomationMLBaseInterface">
+        <InterfaceClass Name="SignalInterface" RefBaseClassPath="Communication" />
+      </InterfaceClass>
+      <InterfaceClass Name="AttachmentInterface" RefBaseClassPath="AutomationMLBaseInterface" />
+    </InterfaceClass>
+  </InterfaceClassLib>
+  <RoleClassLib Name="AutomationMLBaseRoleClassLib">
+    <Description>Automation Markup Language Base Role Class Library - Part 1 Content extended with Part 3 and Part 4 Content</Description>
+    <Version>2.2.2</Version>
+    <RoleClass Name="AutomationMLBaseRole">
+      <RoleClass Name="Group" RefBaseClassPath="AutomationMLBaseRole">
+        <Attribute Name="AssociatedFacet" AttributeDataType="xs:string" />
+        <RoleClass Name="InterlockingSourceGroup" RefBaseClassPath="Group" />
+        <RoleClass Name="InterlockingTargetGroup" RefBaseClassPath="Group" />
+      </RoleClass>
+      <RoleClass Name="Facet" RefBaseClassPath="AutomationMLBaseRole" />
+      <RoleClass Name="Port" RefBaseClassPath="AutomationMLBaseRole">
+        <Attribute Name="Direction" AttributeDataType="xs:string" />
+        <Attribute Name="Cardinality">
+          <Attribute Name="MinOccur" AttributeDataType="xs:unsignedInt" />
+          <Attribute Name="MaxOccur" AttributeDataType="xs:unsignedInt" />
+        </Attribute>
+        <Attribute Name="Category" AttributeDataType="xs:string" />
+        <ExternalInterface Name="ConnectionPoint" ID="9942bd9c-c19d-44e4-a197-11b9edf264e7" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/PortConnector" />
+      </RoleClass>
+      <RoleClass Name="Resource" RefBaseClassPath="AutomationMLBaseRole" />
+      <RoleClass Name="Product" RefBaseClassPath="AutomationMLBaseRole" />
+      <RoleClass Name="Process" RefBaseClassPath="AutomationMLBaseRole" />
+      <RoleClass Name="Structure" RefBaseClassPath="AutomationMLBaseRole">
+        <RoleClass Name="ProductStructure" RefBaseClassPath="Structure" />
+        <RoleClass Name="ProcessStructure" RefBaseClassPath="Structure" />
+        <RoleClass Name="ResourceStructure" RefBaseClassPath="Structure" />
+      </RoleClass>
+      <RoleClass Name="PropertySet" RefBaseClassPath="AutomationMLBaseRole" />
+      <RoleClass Name="Frame" RefBaseClassPath="AutomationMLBaseRole" />
+      <RoleClass Name="LogicObject" RefBaseClassPath="AutomationMLBaseRole" />
+    </RoleClass>
+  </RoleClassLib>
+  <RoleClassLib Name="PA-StandardRole">
+    <Version>0</Version>
+    <RoleClass Name="Structur">
+      <RoleClass Name="Line" />
+      <RoleClass Name="Station" />
+      <RoleClass Name="Functiongroup" />
+    </RoleClass>
+    <RoleClass Name="Technical">
+      <RoleClass Name="Media" />
+      <RoleClass Name="Cabinet" />
+      <RoleClass Name="Panel" />
+      <RoleClass Name="Transport" />
+      <RoleClass Name="Fixture" />
+      <RoleClass Name="Centering" />
+      <RoleClass Name="Robot" />
+      <RoleClass Name="Gripper" />
+      <RoleClass Name="Technology" />
+    </RoleClass>
+  </RoleClassLib>
+</CAEXFile>
