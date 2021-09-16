@@ -1,10 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-
-<ul class='nav'>
+﻿<ul class='nav'>
     <li>
         <div class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ansicht</a>
@@ -16,9 +10,17 @@
             </ul>
         </div>
     </li>
-</ul>
 
-<hr />
+    <li>
+        <div class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Funktionen</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li><a asp-controller="File" asp-action="FileUpload" asp-route-id="">FileUpload</a></li>
+                <li><a asp-controller="AML" asp-action="Index" asp-route-id="">AML</a></li>
+            </ul>
+        </div>
+    </li>
+</ul>
 
 <h1>Projektleiterseite</h1>
 
