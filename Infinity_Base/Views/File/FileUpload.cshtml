@@ -1,5 +1,5 @@
 ﻿
- <ul class='nav'>
+<ul class='nav'>
     <li>
         <div class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ansicht</a>
@@ -23,22 +23,38 @@
     </li>
 </ul>
 
-
 <hr />
-<div class="text-center">
+    <div class="text-center">
     <h1 class="display-4">File Upload</h1>
-    <hr />
+<hr />
+<br />
+<form asp-controller="File" asp-action="FileUpload" method="post"
+      enctype="multipart/form-data">
+    <input type="file" name="file" />
     <br />
-
-   
+    <label>Uploaded File= @ViewData["FilePath"]</label>
+    <br />
+    <button type="submit">Upload AML</button>
+</form>
+<br />
     
-        <form asp-controller="File" asp-action="FileUpload" method="post"
-          enctype="multipart/form-data">
-          <input type="file" name="file" />
-          <button type="submit">Upload File</button>
-          </form>
-        <br />
-        <label>Uploaded File= @ViewData["FilePath"]</label>
-    
-
 </div>
+    
+    <hr />
+    <div class="text-center">
+        <h1 class="display-4">File Download</h1>
+        <hr />
+        <br />
+        <button onclick="window.location.href = 'https://infinitybaseserver.azurewebsites.net/api/up_download';">Download AML</button>
+        <br />
+    </div>
+
+
+
+
+
+
+
+
+
+

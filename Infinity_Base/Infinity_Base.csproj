@@ -6,6 +6,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="turbo.aml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="turbo.aml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Upload\turbo.aml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Aml.Engine" Version="1.6.4" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.9.1" />
     <PackageReference Include="Azure.Storage.Files.Shares" Version="12.1.0" />
@@ -20,6 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Upload\" />
     <Folder Include="wwwroot\Upload\" />
   </ItemGroup>
 

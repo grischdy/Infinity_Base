@@ -5,6 +5,7 @@
   <InstanceHierarchy Name="DE092109001">
     <Version>0</Version>
     <InternalElement Name="001" ID="be8e010e-47bb-4e58-8f03-7da008e3bee3">
+      <Description>Nützlich</Description>
       <Attribute Name="Anlagenname" AttributeDataType="xs:string" />
       <InternalElement Name="ST0000" ID="d1988239-ba73-4d5c-a834-d6bf81effaa6">
         <InternalElement Name="CC001" ID="1edeab97-c0ba-42b1-9720-84cd7a5ab461">
@@ -19,6 +20,7 @@
         <InternalElement Name="OC001" ID="82fbac9a-38f2-4638-be85-5c9ea1d2c8f7">
           <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Panel" />
         </InternalElement>
+        <InternalElement Name="ST0140" ID="ff68970f-e3d2-4384-84e9-bb1852ba78aa" />
         <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
       </InternalElement>
       <InternalElement Name="ST0110" ID="a1aad460-d134-417f-8584-564cacc7eb65">
@@ -45,6 +47,7 @@
           <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
           <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
         </InternalElement>
+        <InternalElement Name="ST0140" ID="d01cb8af-8b06-471d-ab14-105cfa162b23" />
         <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
       </InternalElement>
       <InternalElement Name="ST0120" ID="8e927812-43ee-4f85-8b6d-b98afb19a1f2">
@@ -110,6 +113,7 @@
           <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
           <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
         </InternalElement>
+        <InternalElement Name="ST0140" ID="bf0d562b-482f-4536-b262-92753d77187e" />
         <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
       </InternalElement>
       <InternalElement Name="ST0130" ID="3c7fcf1d-5ed8-439b-8daf-3c191600e853">
@@ -117,15 +121,15 @@
           <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
           <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
         </InternalElement>
+        <InternalElement Name="ST0140" ID="3c052e1c-4241-4a42-9365-4bea1665015f" />
         <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
       </InternalElement>
-      <InternalElement Name="ST0140" ID="482c4076-f454-427b-ac74-1a6e7e201aa9" />
-      <InternalElement Name="ST0140" ID="dd0b8f97-6d71-41ac-8a23-947ae2462513" />
-      <InternalElement Name="ST0140" ID="ad4d062f-e54a-4907-a210-ddf53e2c2188" />
-      <InternalElement Name="ST0140" ID="953a8961-4f12-4905-8549-d9bfb19ad0d5" />
-      <InternalElement Name="ST0140" ID="35416347-b59b-4bbf-890e-6b7266340378" />
-      <InternalElement Name="ST0140" ID="5d310c9b-ed51-4126-893d-45b7faa661c7" />
-      <InternalElement Name="ST0140" ID="3c768fe4-77f3-4c4d-afb9-3e37ede67af9" />
+      <InternalElement Name="ST0142" ID="bd912d75-77c3-4d4e-8fde-1b0280efaaeb" />
+      <InternalElement Name="ST0145" ID="ce99fbde-798b-4566-95ba-8ce725675e45" />
+      <InternalElement Name="ST0143" ID="5d143a78-47d0-481e-91bc-f63525a0e023" />
+      <InternalElement Name="ST0144" ID="a7682126-c6f4-4fcc-b9a0-b3a7c32ac43f">
+        <Description>Nützlich</Description>
+      </InternalElement>
       <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Line" />
     </InternalElement>
   </InstanceHierarchy>

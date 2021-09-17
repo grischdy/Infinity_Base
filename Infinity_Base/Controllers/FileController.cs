@@ -28,6 +28,7 @@ namespace Infinity_Base.Controllers
         }
 
 
+
         [HttpGet] //1.Load//Postback
         public IActionResult FileUpload()
         {
@@ -51,7 +52,7 @@ namespace Infinity_Base.Controllers
 
             //< get Path >
 
-            string path_Root = _appEnvironment.WebRootPath;
+            string path_Root = _appEnvironment.ContentRootPath;
 
             string path_to_Output = path_Root + "\\Upload\\" + file.FileName;
 

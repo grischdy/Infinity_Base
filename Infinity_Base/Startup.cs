@@ -16,6 +16,7 @@ using Microsoft.Extensions.Azure;
 using Azure.Storage.Queues;
 using Azure.Storage.Blobs;
 using Azure.Core.Extensions;
+using Microsoft.Extensions.FileProviders;
 
 namespace Infinity_Base
 {
@@ -45,6 +46,8 @@ namespace Infinity_Base
                 builder.AddBlobServiceClient(Configuration["DefaultEndpointsProtocol=https;AccountName=infinitybaseblobstorage;AccountKey=4kVd/hwjx603AJVT9GpmuxgM5eJQr76cRwFBUVbooS6+37WqJU22T1H6LUA/u6VSRHYL42KPvWRm9AjwAEM7nQ==;EndpointSuffix=core.windows.net:blob"], preferMsi: true);
                 builder.AddQueueServiceClient(Configuration["DefaultEndpointsProtocol=https;AccountName=infinitybaseblobstorage;AccountKey=4kVd/hwjx603AJVT9GpmuxgM5eJQr76cRwFBUVbooS6+37WqJU22T1H6LUA/u6VSRHYL42KPvWRm9AjwAEM7nQ==;EndpointSuffix=core.windows.net:queue"], preferMsi: true);
             });
+
+            services.AddSingleton(System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(),"Turbo.aml"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,6 +64,13 @@ namespace Infinity_Base
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseFileServer(new FileServerOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "Upload")), RequestPath ="", EnableDefaultFiles = true
+            });
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

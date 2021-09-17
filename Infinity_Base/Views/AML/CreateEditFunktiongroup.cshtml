@@ -1,0 +1,34 @@
+﻿@model AML_Functiongroup
+
+
+
+    <div class="card">
+        <div class="card-header">
+            <h5>Create or Edit an Functiongroup</h5>
+        </div>
+
+        <form asp-action="CreateEditStation" method="post">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col form-group">
+                        <input asp-for="Id" placeholder="ID" class="form-control" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col form-group">
+                        <input asp-for="Name" placeholder="Bezeichnung" class="form-control" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col form-group">
+                        <input asp-for="Zusatzinformationen" placeholder="Zusatzinformationen" class="form-control" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary">SAVE</button>
+            </div>
+        </form>
+
+    </div>
