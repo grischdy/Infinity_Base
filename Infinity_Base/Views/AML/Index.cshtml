@@ -4,7 +4,7 @@
 @using Aml.Engine.CAEX.Extensions;
 @using Aml.Engine.Services;
 @using Aml.Engine.Xml.Extensions;
-
+@model AML_Station
 
 
 <ul class='nav'>
@@ -81,7 +81,11 @@
                 <table class="table table-dark table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>@ih3.Name</th>
+                            <th>
+                                <form asp-action="CreateStation" asp-controller="AML" asp-route-id="@ih3.ID">
+                                    <button type="submit" class="btn btn-warning">@ih3.Name</button>
+                                </form>
+                            </th>
                         </tr>
                     </thead>
 
@@ -89,16 +93,20 @@
                         
                     @{foreach (InternalElementType ih4 in ih3.InternalElement)
                     {     
-                    <tr>
-                        <td>
-                            <button with="120px" type="submit" class="btn btn-warning">@ih4.Name</button>
-                            @{foreach (InternalElementType ih5 in ih4.InternalElement)
-                            {
-                            <button with="120px" type="submit" class="btn btn-success">@ih5.Name</button>
-                            }
-                            }
-                        </td>
-                    </tr>                                     
+                                            <tr>
+                                                <td>
+                                                    <form asp-action="CreateStation" asp-route-id="@ih4.Name">
+                                                        <button type="submit" class="btn btn-warning">@ih4.Name</button>
+                                                    </form>
+                                                </td>
+                                                <td>
+                                                    @{foreach (InternalElementType ih5 in ih4.InternalElement)
+                                                        {
+                                                            <button with="120px" type="submit" class="btn btn-success">@ih5.Name</button>
+                                                        }
+                                                    }
+                                                </td>
+                                            </tr>                                     
                      }
                      }                           
                     </tbody>

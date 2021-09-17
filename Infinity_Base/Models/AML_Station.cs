@@ -7,6 +7,7 @@ namespace Infinity_Base.Models
 {
     public class AML_Station
     {
+        public string Id { get; set; }
 
         public string Stationsnummer { get; set; }
 

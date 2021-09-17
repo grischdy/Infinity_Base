@@ -120,6 +120,12 @@
         <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
       </InternalElement>
       <InternalElement Name="ST0140" ID="482c4076-f454-427b-ac74-1a6e7e201aa9" />
+      <InternalElement Name="ST0140" ID="dd0b8f97-6d71-41ac-8a23-947ae2462513" />
+      <InternalElement Name="ST0140" ID="ad4d062f-e54a-4907-a210-ddf53e2c2188" />
+      <InternalElement Name="ST0140" ID="953a8961-4f12-4905-8549-d9bfb19ad0d5" />
+      <InternalElement Name="ST0140" ID="35416347-b59b-4bbf-890e-6b7266340378" />
+      <InternalElement Name="ST0140" ID="5d310c9b-ed51-4126-893d-45b7faa661c7" />
+      <InternalElement Name="ST0140" ID="3c768fe4-77f3-4c4d-afb9-3e37ede67af9" />
       <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Line" />
     </InternalElement>
   </InstanceHierarchy>

@@ -45,12 +45,21 @@ namespace Infinity_Base.Controllers
 
             return View();
         }
-
-
-        public IActionResult CreateStation()
+        
+        
+        public IActionResult CreateStation(AML_Station AML_Station)
         {
-            return View("CreateEditStation");
+
+
+            if (AML_Station.Id == null)
+            {
+                return View("CreateEditStation");
+            }
+
+            return View("CreateEditStation", AML_Station);
         }
+
+
 
         [HttpPost]
         public IActionResult CreateEditStation(AML_Station AML_Station)
@@ -60,9 +69,12 @@ namespace Infinity_Base.Controllers
             {
                 foreach (InternalElementType ih2 in ih1.InternalElement)
                 {
-
-                    var ih3 = ih2.InternalElement.Append(AML_Station.Stationsnummer);
-
+                    foreach (InternalElementType ih3 in ih2.InternalElement)
+                    {
+                        
+                    }
+                        
+                    
                 }
             }
             myDoc.SaveToFile(Dateipfad, true);
