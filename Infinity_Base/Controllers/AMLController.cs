@@ -56,6 +56,7 @@ namespace Infinity_Base.Controllers
 
         public IActionResult CreateStation(AML_Station AML_Station)
         {
+            var myDoc = globals._myglobalDoc;
 
 
             if (AML_Station.Id == null)
@@ -63,8 +64,7 @@ namespace Infinity_Base.Controllers
                 return View("CreateEditStation");
             }
             else
-            {
-                var myDoc = globals._myglobalDoc;
+            { 
                 foreach (InstanceHierarchyType ih1 in myDoc.CAEXFile.InstanceHierarchy)
                 {
                     foreach (InternalElementType ih2 in ih1.InternalElement)
@@ -80,42 +80,8 @@ namespace Infinity_Base.Controllers
                     }
                 }
             }
-
             return View("CreateEditStation", AML_Station);
         }
-
-
-        public IActionResult CreateEditFunktiongroup(AML_Functiongroup AML_Functiongroup)
-        {
-
-
-            if (AML_Functiongroup.Id == null)
-            {
-                return View("CreateEditStation");
-            }
-            else
-            {
-                var myDoc = globals._myglobalDoc;
-                foreach (InstanceHierarchyType ih1 in myDoc.CAEXFile.InstanceHierarchy)
-                {
-                    foreach (InternalElementType ih2 in ih1.InternalElement)
-                    {
-                        foreach (InternalElementType ih3 in ih2.InternalElement)
-                        {
-                            if (ih3.ID == AML_Functiongroup.Id)
-                            {
-                                AML_Functiongroup.Name = ih3.Name;
-                                AML_Functiongroup.Zusatzinformationen = ih3.Description;
-                            }
-                        }
-                    }
-                }
-            }
-
-            return View("CreateEditStation", AML_Functiongroup);
-        }
-
-
 
         [HttpPost]
         public IActionResult CreateEditStation(AML_Station AML_Station)
@@ -132,22 +98,19 @@ namespace Infinity_Base.Controllers
                     foreach (InternalElementType ih2 in ih1.InternalElement)
                     {
                         var caexObj_1 = myDoc.FindByID(AML_Station.Id);
-                        if(caexObj_1==null)
+                        if (caexObj_1 == null)
                         {
-                            var new_Element =ih2.InternalElement.Append(AML_Station.Stationsnummer);
+                            var new_Element = ih2.InternalElement.Append(AML_Station.Stationsnummer);
                             new_Element.Description = AML_Station.Zusatzinformationen;
-
                             myDoc.SaveToFile(Dateipfad, true);
                             return RedirectToAction("Index");
                         }
                         if (caexObj_1 != null)
                         {
-                           
-                   
 
                             myDoc.SaveToFile(Dateipfad, true);
                             return RedirectToAction("Index");
-                        } 
+                        }
                     }
                 }
             }
@@ -155,5 +118,84 @@ namespace Infinity_Base.Controllers
             myDoc.SaveToFile(Dateipfad, true);
             return RedirectToAction("Index");
         }
+
+
+
+        public IActionResult CreateEditFunctiongroup(AML_Functiongroup AML_Functiongroup)
+        {
+
+
+            if (AML_Functiongroup.Id == null)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                var myDoc = globals._myglobalDoc;
+                foreach (InstanceHierarchyType ih1 in myDoc.CAEXFile.InstanceHierarchy)
+                {
+                    foreach (InternalElementType ih2 in ih1.InternalElement)
+                    {
+                        foreach (InternalElementType ih3 in ih2.InternalElement)
+                        {
+                            var caexObj_1 = myDoc.FindByID(AML_Functiongroup.Id);
+                            if (caexObj_1 == null)
+                            {
+                                var new_Element = ih2.InternalElement.Append(AML_Functiongroup.Name);
+                                new_Element.Description = AML_Functiongroup.Zusatzinformationen;
+
+                                myDoc.SaveToFile(Dateipfad, true);
+                                return RedirectToAction("Index");
+                            }
+                            if (caexObj_1 != null)
+                            {
+                                myDoc.SaveToFile(Dateipfad, true);
+                                return RedirectToAction("Index");
+                            }
+                        }
+                    }
+                }
+            }
+
+            return View("CreateEditFunktiongroup", AML_Functiongroup);
+        }
+
+
+
+
+        [HttpPost]
+        public IActionResult CreateFunctiongroup(AML_Functiongroup AML_Functiongroup)
+        {
+            var myDoc = globals._myglobalDoc;
+            
+            if (AML_Functiongroup == null)
+            {
+                return View("CreateEditFunctiongroup");
+            }
+            else
+            {
+                foreach (InstanceHierarchyType ih1 in myDoc.CAEXFile.InstanceHierarchy)
+                {
+                    foreach (InternalElementType ih2 in ih1.InternalElement)
+                    {
+                        foreach (InternalElementType ih3 in ih2.InternalElement)
+                        {
+                            foreach (InternalElementType ih4 in ih3.InternalElement)
+                            {
+                                var caexObj_1 = myDoc.FindByID(AML_Functiongroup.Id);
+                                if (caexObj_1 != null)
+                                {
+                                    AML_Functiongroup.Name = caexObj_1.Name;
+                                    AML_Functiongroup.Zusatzinformationen = caexObj_1.Description;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return View("CreateEditFunctiongroup", AML_Functiongroup);
+        }
+
+
     }
 }

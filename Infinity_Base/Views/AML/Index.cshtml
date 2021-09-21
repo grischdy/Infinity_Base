@@ -31,8 +31,14 @@
 </ul>
 <hr />
 
+
 <form asp-action="CreateStation">
-    <button type="submit" class="btn btn-primary">+ Add Station</button>
+    <span class="tt" data-bs-placement="bottom" title="V2">
+        <button type="submit"
+                class="btn btn-primary">
+            + Add Station
+        </button>
+        </span>
 </form>
 <hr />
 
@@ -72,12 +78,13 @@
 <!--Für jede Station eine Tabelle generieren die die Funktionsgruppen beinhaltet-->
 
 
-@{foreach (InstanceHierarchyType ih1 in ViewBag.myDoc.CAEXFile.InstanceHierarchy)
+@{  var ih = ViewBag.myDoc.CAEXFile.InstanceHierarchy[0];
+    //foreach (InstanceHierarchyType ih1 in ih)
+    //{
+    foreach (InternalElementType ih2 in ih)
     {
-        foreach (InternalElementType ih2 in ih1.InternalElement)
+        foreach (InternalElementType ih3 in ih2.InternalElement)
         {
-            foreach (InternalElementType ih3 in ih2.InternalElement)
-            {
                 <table class="table table-dark table-striped table-hover">
                     <thead>
                         <tr>
@@ -85,35 +92,98 @@
                                 <form asp-action="CreateStation" asp-controller="AML" asp-route-id="@ih3.ID">
                                     <button type="submit" class="btn btn-warning">@ih3.Name</button>
                                 </form>
+                                <form asp-action="CreateFunctiongroup" asp-controller="Funtiongroup" asp-route-id="">
+                                    <button type="submit" class="btn btn-primary">+ Add Functiongroup</button>
+                                </form>
                             </th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        
-                    @{foreach (InternalElementType ih4 in ih3.InternalElement)
-                    {     
-                                            <tr>
-                                                <td>
-                                                    <form asp-action="CreateEditFunktiongroup" asp-controller="AML" asp-route-id="@ih4.ID">
+
+                        @{foreach (InternalElementType ih4 in ih3.InternalElement)
+                            {
+                                <tr>
+                                    <td>
+                                    <form asp-action="CreateFunctiongroup" asp-controller="Funtiongroup" asp-route-id="@ih4.ID">
+                                        @{ if (ih4.Name != null)
+                                            {
+                                                if (ih4.Name.StartsWith("IR") == true)
+                                                {
+                                                    <span class="tt" data-bs-placement="bottom" data-bs-html="true" delay="500" title="<img src='../Bilder/IR.png' height='100' width='100' />">
                                                         <button type="submit" class="btn btn-warning">@ih4.Name</button>
-                                                    </form>
-                                                </td>
-                                                <td>
-                                                    @{foreach (InternalElementType ih5 in ih4.InternalElement)
-                                                        {
-                                                            <button with="120px" type="submit" class="btn btn-success">@ih5.Name</button>
-                                                        }
-                                                    }
-                                                </td>
-                                            </tr>                                     
-                     }
-                     }                           
+                                                    </span>
+                                                }
+                                                else if (ih4.Name.StartsWith("C") == true)
+                                                {
+                                                    <span class="tt" data-bs-placement="bottom" data-bs-html="true" delay="500" title="<img src='../Bilder/CX.png' height='100' width='100' />">
+                                                        <button type="submit" class="btn btn-warning">@ih4.Name</button>
+                                                    </span>
+                                                }
+                                                else if (ih4.Name.StartsWith("M") == true)
+                                                {
+                                                    <span class="tt" data-bs-placement="bottom" data-bs-html="true" delay="500" title="<img src='../Bilder/MX.png' height='100' width='100' />">
+                                                        <button type="submit" class="btn btn-warning">@ih4.Name</button>
+                                                    </span>
+                                                }
+                                                else if (ih4.Name.StartsWith("O") == true)
+                                                {
+                                                    <span class="tt" data-bs-placement="bottom" data-bs-html="true" delay="500" title="<img src='../Bilder/OX.png' height='100' width='100' />">
+                                                        <button type="submit" class="btn btn-warning">@ih4.Name</button>
+                                                    </span>
+                                                }
+                                                else if (ih4.Name.StartsWith("TL") == true)
+                                                {
+                                                    <span class="tt" data-bs-placement="bottom" data-bs-html="true" delay="500" title="<img src='../Bilder/TL.png' height='100' width='100' />">
+                                                        <button type="submit" class="btn btn-warning">@ih4.Name</button>
+                                                    </span>
+                                                }
+                                                 else 
+                                                {
+                                                        <button type="submit" class="btn btn-warning">@ih4.Name</button>
+                                                }
+                                            }
+                                        }
+                                    </form>
+                                     </td>                                                             
+                                    <td>
+                                        @{foreach (InternalElementType ih5 in ih4.InternalElement)
+                                            {
+                                                <button type="submit" class="btn btn-success">@ih5.Name</button>
+                                            }
+                                        }
+                                    </td>
+                                </tr>
+
+                            }
+                        }
                     </tbody>
                 </table>
             }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" 
+        crossorigin="anonymous"></script>
+
+<script>
+    const tooltips = document.querySelectorAll('.tt')
+    tooltips.forEach(t => {
+        new bootstrap.Tooltip(t)
+    })
+</script>
 
 

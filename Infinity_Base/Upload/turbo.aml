@@ -1,12 +1,12 @@
-﻿<CAEXFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.dke.de/CAEX" SchemaVersion="3.0" FileName="Daimleranlage.aml" xsi:schemaLocation="http://www.dke.de/CAEX CAEX_ClassModel_V.3.0.xsd">
+﻿<CAEXFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.dke.de/CAEX" SchemaVersion="3.0" FileName="Daimleranlage_V0.1.aml" xsi:schemaLocation="http://www.dke.de/CAEX CAEX_ClassModel_V.3.0.xsd">
   <AdditionalInformation AutomationMLVersion="2.0" />
   <SuperiorStandardVersion>AutomationML 2.10</SuperiorStandardVersion>
-  <SourceDocumentInformation OriginName="AutomationML Editor" OriginID="916578CA-FE0D-474E-A4FC-9E1719892369" OriginVersion="5.5.4.0" LastWritingDateTime="2021-09-16T11:31:47.5482801+02:00" OriginVendor="AutomationML e.V." OriginVendorURL="www.AutomationML.org" OriginRelease="5.5.4.0" OriginProjectTitle="unspecified" OriginProjectID="unspecified" />
-  <InstanceHierarchy Name="DE092109001">
+  <SourceDocumentInformation OriginName="AutomationML Editor" OriginID="916578CA-FE0D-474E-A4FC-9E1719892369" OriginVersion="5.5.4.0" LastWritingDateTime="2021-09-20T14:28:33.0108311+02:00" OriginVendor="AutomationML e.V." OriginVendorURL="www.AutomationML.org" OriginRelease="5.5.4.0" OriginProjectTitle="unspecified" OriginProjectID="unspecified" />
+  <InstanceHierarchy Name="DE092109001-start">
     <Version>0</Version>
     <InternalElement Name="001" ID="be8e010e-47bb-4e58-8f03-7da008e3bee3">
       <Attribute Name="Anlagenname" AttributeDataType="xs:string" />
-      <InternalElement Name="ST0000" ID="d1988239-ba73-4d5c-a834-d6bf81effaa6">
+      <InternalElement Name="0000" ID="d1988239-ba73-4d5c-a834-d6bf81effaa6">
         <InternalElement Name="CC001" ID="1edeab97-c0ba-42b1-9720-84cd7a5ab461">
           <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Cabinet" />
         </InternalElement>
@@ -21,7 +21,7 @@
         </InternalElement>
         <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
       </InternalElement>
-      <InternalElement Name="ST0110" ID="a1aad460-d134-417f-8584-564cacc7eb65">
+      <InternalElement Name="0110" ID="a1aad460-d134-417f-8584-564cacc7eb65">
         <InternalElement Name="TL001" ID="7aad62d4-088f-4e8c-b32c-b2081c85c2b0">
           <InternalElement Name="FX001" ID="cdf8807f-b22b-45b9-9c98-63175372b132">
             <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Centering" />
@@ -47,7 +47,7 @@
         </InternalElement>
         <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
       </InternalElement>
-      <InternalElement Name="ST0120" ID="8e927812-43ee-4f85-8b6d-b98afb19a1f2">
+      <InternalElement Name="0120" ID="8e927812-43ee-4f85-8b6d-b98afb19a1f2">
         <InternalElement Name="TL001" ID="d0e3abc9-0d16-492e-8b43-f78983b56efc">
           <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
           <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
@@ -62,7 +62,7 @@
           <InternalElement Name="MS001" ID="7fe7e363-ac54-4a41-95e9-bbb8591296dd">
             <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Media" />
           </InternalElement>
-          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Robot" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Maniplulator" />
           <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
         </InternalElement>
         <InternalElement Name="IR002" ID="0be5c951-ccb3-4537-99aa-5b676ee7cd55">
@@ -75,7 +75,7 @@
           <InternalElement Name="MS001" ID="cf569bff-5f95-4a47-8c8a-ebb45abbd084">
             <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Media" />
           </InternalElement>
-          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Robot" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Maniplulator" />
           <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
         </InternalElement>
         <InternalElement Name="TR001" ID="d2310ffb-10a4-45a6-aa75-6cefa7349686">
@@ -112,10 +112,568 @@
         </InternalElement>
         <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
       </InternalElement>
-      <InternalElement Name="ST0130" ID="3c7fcf1d-5ed8-439b-8daf-3c191600e853">
+      <InternalElement Name="0130" ID="3c7fcf1d-5ed8-439b-8daf-3c191600e853">
         <InternalElement Name="TO001" ID="cd63d9ac-814e-4ab5-8520-d7dcce322128">
           <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
           <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
+        </InternalElement>
+        <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
+      </InternalElement>
+      <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Line" />
+    </InternalElement>
+  </InstanceHierarchy>
+  <InstanceHierarchy Name="DE092109001-modifyed">
+    <Version>0</Version>
+    <InternalElement Name="PA_Line" ID="5461c889-efae-4c51-84a7-c487c08eeef9" RefBaseSystemUnitPath="Conceptlib/Line">
+      <Attribute Name="Standard" AttributeDataType="xs:string">
+        <Attribute Name="BMW" AttributeDataType="xs:string">
+          <Value>Line_BMW</Value>
+        </Attribute>
+        <Attribute Name="Daimler" AttributeDataType="xs:string">
+          <Value>Daimler_Line</Value>
+        </Attribute>
+        <Attribute Name="PA" AttributeDataType="xs:string">
+          <Value>PA_Line</Value>
+        </Attribute>
+        <Attribute Name="VW" AttributeDataType="xs:string">
+          <Value>VW_Line</Value>
+        </Attribute>
+      </Attribute>
+      <InternalElement Name="PA_Station" ID="b91ed7ba-421c-4703-a072-6b280092afa6" RefBaseSystemUnitPath="Conceptlib/Station">
+        <Attribute Name="Standard" AttributeDataType="xs:string">
+          <Attribute Name="BMW" AttributeDataType="xs:string">
+            <Value>BMW_Station</Value>
+          </Attribute>
+          <Attribute Name="Daimler" AttributeDataType="xs:string">
+            <Value>Daimler_Station</Value>
+          </Attribute>
+          <Attribute Name="PA" AttributeDataType="xs:string">
+            <Value>PA_Station</Value>
+          </Attribute>
+          <Attribute Name="VW" AttributeDataType="xs:string">
+            <Value>VW_Station</Value>
+          </Attribute>
+        </Attribute>
+        <InternalElement Name="CC" ID="83896188-0eb2-44b6-a3f1-565af161711c" RefBaseSystemUnitPath="Cabinetlib/Cabinet_Control">
+          <Attribute Name="Standard" AttributeDataType="xs:string">
+            <Attribute Name="BMW" AttributeDataType="xs:string">
+              <Value>CC</Value>
+            </Attribute>
+            <Attribute Name="Daimler" AttributeDataType="xs:string">
+              <Value>CC_DAI</Value>
+            </Attribute>
+            <Attribute Name="PA" AttributeDataType="xs:string">
+              <Value>CC</Value>
+            </Attribute>
+            <Attribute Name="VW" AttributeDataType="xs:string">
+              <Value>CC_VW</Value>
+            </Attribute>
+          </Attribute>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Cabinet" />
+        </InternalElement>
+        <InternalElement Name="OP" ID="68918ac0-98b4-4ba9-8fad-60c004b003b4" RefBaseSystemUnitPath="Cabinetlib/Operation Center">
+          <Attribute Name="Standard" AttributeDataType="xs:string">
+            <Attribute Name="BMW" AttributeDataType="xs:string">
+              <Value>OP</Value>
+            </Attribute>
+            <Attribute Name="Daimler" AttributeDataType="xs:string">
+              <Value>OP_DAI</Value>
+            </Attribute>
+            <Attribute Name="PA" AttributeDataType="xs:string">
+              <Value>OP</Value>
+            </Attribute>
+            <Attribute Name="VW" AttributeDataType="xs:string">
+              <Value>OP_VW</Value>
+            </Attribute>
+          </Attribute>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Panel" />
+        </InternalElement>
+        <InternalElement Name="MS" ID="0ea82df0-e2dd-42f9-a035-8edff907f21e" RefBaseSystemUnitPath="Cabinetlib/Media Supply">
+          <Attribute Name="Standard" AttributeDataType="xs:string">
+            <Attribute Name="BMW" AttributeDataType="xs:string">
+              <Value>MS</Value>
+            </Attribute>
+            <Attribute Name="Daimler" AttributeDataType="xs:string">
+              <Value>MS_DAI</Value>
+            </Attribute>
+            <Attribute Name="PA" AttributeDataType="xs:string">
+              <Value>MS</Value>
+            </Attribute>
+            <Attribute Name="VW" AttributeDataType="xs:string">
+              <Value>MS_VW</Value>
+            </Attribute>
+          </Attribute>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Media" />
+        </InternalElement>
+        <InternalElement Name="CD" ID="9504b4b8-1ab0-42b1-b3bd-b56240a74224" RefBaseSystemUnitPath="Cabinetlib/Cabinet_Motor Panel">
+          <Attribute Name="Standard" AttributeDataType="xs:string">
+            <Attribute Name="BMW" AttributeDataType="xs:string">
+              <Value>CD</Value>
+            </Attribute>
+            <Attribute Name="Daimler" AttributeDataType="xs:string">
+              <Value>CD_DAI</Value>
+            </Attribute>
+            <Attribute Name="PA" AttributeDataType="xs:string">
+              <Value>CD</Value>
+            </Attribute>
+            <Attribute Name="VW" AttributeDataType="xs:string">
+              <Value>CD_VW</Value>
+            </Attribute>
+          </Attribute>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Cabinet" />
+        </InternalElement>
+        <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
+      </InternalElement>
+      <InternalElement Name="PA_Station" ID="26d176c6-0280-4059-b1ac-b14c760516e2" RefBaseSystemUnitPath="Conceptlib/Station">
+        <Attribute Name="Standard" AttributeDataType="xs:string">
+          <Attribute Name="BMW" AttributeDataType="xs:string">
+            <Value>BMW_Station</Value>
+          </Attribute>
+          <Attribute Name="Daimler" AttributeDataType="xs:string">
+            <Value>Daimler_Station</Value>
+          </Attribute>
+          <Attribute Name="PA" AttributeDataType="xs:string">
+            <Value>PA_Station</Value>
+          </Attribute>
+          <Attribute Name="VW" AttributeDataType="xs:string">
+            <Value>VW_Station</Value>
+          </Attribute>
+        </Attribute>
+        <InternalElement Name="TL" ID="29d1b61c-7626-496c-93a8-cac6f03e75f3" RefBaseSystemUnitPath="Conceptlib/Transport">
+          <Attribute Name="Standard" AttributeDataType="xs:string">
+            <Attribute Name="BMW" AttributeDataType="xs:string">
+              <Value>TL</Value>
+            </Attribute>
+            <Attribute Name="Daimler" AttributeDataType="xs:string">
+              <Value>TL_DAI</Value>
+            </Attribute>
+            <Attribute Name="PA" AttributeDataType="xs:string">
+              <Value>TL</Value>
+            </Attribute>
+            <Attribute Name="VW" AttributeDataType="xs:string">
+              <Value>TL_VW</Value>
+            </Attribute>
+          </Attribute>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+        </InternalElement>
+        <InternalElement Name="TL" ID="8f0bdca0-8cf8-478b-ba20-ff509a034dde" RefBaseSystemUnitPath="Conceptlib/Transport">
+          <Attribute Name="Standard" AttributeDataType="xs:string">
+            <Attribute Name="BMW" AttributeDataType="xs:string">
+              <Value>TL</Value>
+            </Attribute>
+            <Attribute Name="Daimler" AttributeDataType="xs:string">
+              <Value>TL_DAI</Value>
+            </Attribute>
+            <Attribute Name="PA" AttributeDataType="xs:string">
+              <Value>TL</Value>
+            </Attribute>
+            <Attribute Name="VW" AttributeDataType="xs:string">
+              <Value>TL_VW</Value>
+            </Attribute>
+          </Attribute>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+        </InternalElement>
+        <InternalElement Name="TL" ID="f4666048-daaa-40ca-9d4d-628ae072cdcb" RefBaseSystemUnitPath="Conceptlib/Transport">
+          <Attribute Name="Standard" AttributeDataType="xs:string">
+            <Attribute Name="BMW" AttributeDataType="xs:string">
+              <Value>TL</Value>
+            </Attribute>
+            <Attribute Name="Daimler" AttributeDataType="xs:string">
+              <Value>TL_DAI</Value>
+            </Attribute>
+            <Attribute Name="PA" AttributeDataType="xs:string">
+              <Value>TL</Value>
+            </Attribute>
+            <Attribute Name="VW" AttributeDataType="xs:string">
+              <Value>TL_VW</Value>
+            </Attribute>
+          </Attribute>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+        </InternalElement>
+        <InternalElement Name="TL" ID="4ade8774-70cb-4a0a-a76f-ad479d475d1f" RefBaseSystemUnitPath="Conceptlib/Transport">
+          <Attribute Name="Standard" AttributeDataType="xs:string">
+            <Attribute Name="BMW" AttributeDataType="xs:string">
+              <Value>TL</Value>
+            </Attribute>
+            <Attribute Name="Daimler" AttributeDataType="xs:string">
+              <Value>TL_DAI</Value>
+            </Attribute>
+            <Attribute Name="PA" AttributeDataType="xs:string">
+              <Value>TL</Value>
+            </Attribute>
+            <Attribute Name="VW" AttributeDataType="xs:string">
+              <Value>TL_VW</Value>
+            </Attribute>
+          </Attribute>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+        </InternalElement>
+        <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
+      </InternalElement>
+      <InternalElement Name="PA_Station" ID="cf524d91-17c1-4ab4-82af-37ea7b174e35" RefBaseSystemUnitPath="Conceptlib/Station">
+        <Attribute Name="Standard" AttributeDataType="xs:string">
+          <Attribute Name="BMW" AttributeDataType="xs:string">
+            <Value>BMW_Station</Value>
+          </Attribute>
+          <Attribute Name="Daimler" AttributeDataType="xs:string">
+            <Value>Daimler_Station</Value>
+          </Attribute>
+          <Attribute Name="PA" AttributeDataType="xs:string">
+            <Value>PA_Station</Value>
+          </Attribute>
+          <Attribute Name="VW" AttributeDataType="xs:string">
+            <Value>VW_Station</Value>
+          </Attribute>
+        </Attribute>
+        <InternalElement Name="IR" ID="d1aaa40a-2e77-495a-a1e5-8320af9973be" RefBaseSystemUnitPath="Conceptlib/Manipluator">
+          <Attribute Name="Standard" AttributeDataType="xs:string">
+            <Attribute Name="BMW" AttributeDataType="xs:string">
+              <Value>IR</Value>
+            </Attribute>
+            <Attribute Name="Daimler" AttributeDataType="xs:string">
+              <Value>IR_DAI</Value>
+            </Attribute>
+            <Attribute Name="PA" AttributeDataType="xs:string">
+              <Value>IR</Value>
+            </Attribute>
+            <Attribute Name="VW" AttributeDataType="xs:string">
+              <Value>IR_VW</Value>
+            </Attribute>
+          </Attribute>
+          <InternalElement Name="FG" ID="7b246e7a-8dc7-4fc7-89f0-157b25df3b4c" RefBaseSystemUnitPath="Processlib/Gripper ">
+            <Attribute Name="Standard" AttributeDataType="xs:string">
+              <Attribute Name="BMW" AttributeDataType="xs:string">
+                <Value>FG</Value>
+              </Attribute>
+              <Attribute Name="Daimler" AttributeDataType="xs:string">
+                <Value>FG_DAI</Value>
+              </Attribute>
+              <Attribute Name="PA" AttributeDataType="xs:string">
+                <Value>FG</Value>
+              </Attribute>
+              <Attribute Name="VW" AttributeDataType="xs:string">
+                <Value>FG_VW</Value>
+              </Attribute>
+            </Attribute>
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Gripper" />
+          </InternalElement>
+          <InternalElement Name="MS" ID="b9f6c9df-1a98-4a1f-9fc9-1ff203c9dbd5" RefBaseSystemUnitPath="Cabinetlib/Media Supply">
+            <Attribute Name="Standard" AttributeDataType="xs:string">
+              <Attribute Name="BMW" AttributeDataType="xs:string">
+                <Value>MS</Value>
+              </Attribute>
+              <Attribute Name="Daimler" AttributeDataType="xs:string">
+                <Value>MS_DAI</Value>
+              </Attribute>
+              <Attribute Name="PA" AttributeDataType="xs:string">
+                <Value>MS</Value>
+              </Attribute>
+              <Attribute Name="VW" AttributeDataType="xs:string">
+                <Value>MS_VW</Value>
+              </Attribute>
+            </Attribute>
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Media" />
+          </InternalElement>
+          <InternalElement Name="CR" ID="1de10340-79fc-43a7-b4cf-af351aab07ee">
+            <Attribute Name="Standard" AttributeDataType="xs:string">
+              <Attribute Name="BMW" AttributeDataType="xs:string">
+                <Value>CR</Value>
+              </Attribute>
+              <Attribute Name="Daimler" AttributeDataType="xs:string">
+                <Value>CR_DAI</Value>
+              </Attribute>
+              <Attribute Name="PA" AttributeDataType="xs:string">
+                <Value>CR</Value>
+              </Attribute>
+              <Attribute Name="VW" AttributeDataType="xs:string">
+                <Value>CR_VW</Value>
+              </Attribute>
+            </Attribute>
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Cabinet" />
+          </InternalElement>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Maniplulator" />
+        </InternalElement>
+        <InternalElement Name="TL" ID="042e3409-459e-4f22-965d-058ef7e86da9" RefBaseSystemUnitPath="Conceptlib/Transport">
+          <Attribute Name="Standard" AttributeDataType="xs:string">
+            <Attribute Name="BMW" AttributeDataType="xs:string">
+              <Value>TL</Value>
+            </Attribute>
+            <Attribute Name="Daimler" AttributeDataType="xs:string">
+              <Value>TL_DAI</Value>
+            </Attribute>
+            <Attribute Name="PA" AttributeDataType="xs:string">
+              <Value>TL</Value>
+            </Attribute>
+            <Attribute Name="VW" AttributeDataType="xs:string">
+              <Value>TL_VW</Value>
+            </Attribute>
+          </Attribute>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+        </InternalElement>
+        <InternalElement Name="IR" ID="1dc53039-847e-401d-af72-daa08c4d75b4" RefBaseSystemUnitPath="Conceptlib/Manipluator">
+          <Attribute Name="Standard" AttributeDataType="xs:string">
+            <Attribute Name="BMW" AttributeDataType="xs:string">
+              <Value>IR</Value>
+            </Attribute>
+            <Attribute Name="Daimler" AttributeDataType="xs:string">
+              <Value>IR_DAI</Value>
+            </Attribute>
+            <Attribute Name="PA" AttributeDataType="xs:string">
+              <Value>IR</Value>
+            </Attribute>
+            <Attribute Name="VW" AttributeDataType="xs:string">
+              <Value>IR_VW</Value>
+            </Attribute>
+          </Attribute>
+          <InternalElement Name="FG" ID="340969fd-a49c-46f5-b80e-1e271f9cc14b" RefBaseSystemUnitPath="Processlib/Gripper ">
+            <Attribute Name="Standard" AttributeDataType="xs:string">
+              <Attribute Name="BMW" AttributeDataType="xs:string">
+                <Value>FG</Value>
+              </Attribute>
+              <Attribute Name="Daimler" AttributeDataType="xs:string">
+                <Value>FG_DAI</Value>
+              </Attribute>
+              <Attribute Name="PA" AttributeDataType="xs:string">
+                <Value>FG</Value>
+              </Attribute>
+              <Attribute Name="VW" AttributeDataType="xs:string">
+                <Value>FG_VW</Value>
+              </Attribute>
+            </Attribute>
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Gripper" />
+          </InternalElement>
+          <InternalElement Name="MS" ID="1c603e13-bf06-4903-ab61-4af5bb3fdbdf" RefBaseSystemUnitPath="Cabinetlib/Media Supply">
+            <Attribute Name="Standard" AttributeDataType="xs:string">
+              <Attribute Name="BMW" AttributeDataType="xs:string">
+                <Value>MS</Value>
+              </Attribute>
+              <Attribute Name="Daimler" AttributeDataType="xs:string">
+                <Value>MS_DAI</Value>
+              </Attribute>
+              <Attribute Name="PA" AttributeDataType="xs:string">
+                <Value>MS</Value>
+              </Attribute>
+              <Attribute Name="VW" AttributeDataType="xs:string">
+                <Value>MS_VW</Value>
+              </Attribute>
+            </Attribute>
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Media" />
+          </InternalElement>
+          <InternalElement Name="CR" ID="d8aa2924-45ad-4884-9008-b42a5de4ad20">
+            <Attribute Name="Standard" AttributeDataType="xs:string">
+              <Attribute Name="BMW" AttributeDataType="xs:string">
+                <Value>CR</Value>
+              </Attribute>
+              <Attribute Name="Daimler" AttributeDataType="xs:string">
+                <Value>CR_DAI</Value>
+              </Attribute>
+              <Attribute Name="PA" AttributeDataType="xs:string">
+                <Value>CR</Value>
+              </Attribute>
+              <Attribute Name="VW" AttributeDataType="xs:string">
+                <Value>CR_VW</Value>
+              </Attribute>
+            </Attribute>
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Cabinet" />
+          </InternalElement>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Maniplulator" />
+        </InternalElement>
+        <InternalElement Name="TL" ID="d52d0f59-eaaf-4268-8a91-0e569dabd09c" RefBaseSystemUnitPath="Conceptlib/Transport">
+          <Attribute Name="Standard" AttributeDataType="xs:string">
+            <Attribute Name="BMW" AttributeDataType="xs:string">
+              <Value>TL</Value>
+            </Attribute>
+            <Attribute Name="Daimler" AttributeDataType="xs:string">
+              <Value>TL_DAI</Value>
+            </Attribute>
+            <Attribute Name="PA" AttributeDataType="xs:string">
+              <Value>TL</Value>
+            </Attribute>
+            <Attribute Name="VW" AttributeDataType="xs:string">
+              <Value>TL_VW</Value>
+            </Attribute>
+          </Attribute>
+          <InternalElement Name="FX" ID="2bb03791-f2e6-4d0e-9487-1b06376a1f8c" RefBaseSystemUnitPath="Conceptlib/Fixture">
+            <Attribute Name="Standard" AttributeDataType="xs:string">
+              <Attribute Name="BMW" AttributeDataType="xs:string">
+                <Value>FX</Value>
+              </Attribute>
+              <Attribute Name="Daimler" AttributeDataType="xs:string">
+                <Value>FX_DAI</Value>
+              </Attribute>
+              <Attribute Name="PA" AttributeDataType="xs:string">
+                <Value>FX</Value>
+              </Attribute>
+              <Attribute Name="VW" AttributeDataType="xs:string">
+                <Value>FX_VW</Value>
+              </Attribute>
+            </Attribute>
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+          </InternalElement>
+          <InternalElement Name="FX" ID="02611656-456e-4493-b4a8-bd2a540c30a4" RefBaseSystemUnitPath="Conceptlib/Fixture">
+            <Attribute Name="Standard" AttributeDataType="xs:string">
+              <Attribute Name="BMW" AttributeDataType="xs:string">
+                <Value>FX</Value>
+              </Attribute>
+              <Attribute Name="Daimler" AttributeDataType="xs:string">
+                <Value>FX_DAI</Value>
+              </Attribute>
+              <Attribute Name="PA" AttributeDataType="xs:string">
+                <Value>FX</Value>
+              </Attribute>
+              <Attribute Name="VW" AttributeDataType="xs:string">
+                <Value>FX_VW</Value>
+              </Attribute>
+            </Attribute>
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+          </InternalElement>
+          <InternalElement Name="FX" ID="8beb0624-9681-400d-8d25-8ced0534d27b" RefBaseSystemUnitPath="Conceptlib/Fixture">
+            <Attribute Name="Standard" AttributeDataType="xs:string">
+              <Attribute Name="BMW" AttributeDataType="xs:string">
+                <Value>FX</Value>
+              </Attribute>
+              <Attribute Name="Daimler" AttributeDataType="xs:string">
+                <Value>FX_DAI</Value>
+              </Attribute>
+              <Attribute Name="PA" AttributeDataType="xs:string">
+                <Value>FX</Value>
+              </Attribute>
+              <Attribute Name="VW" AttributeDataType="xs:string">
+                <Value>FX_VW</Value>
+              </Attribute>
+            </Attribute>
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+          </InternalElement>
+          <InternalElement Name="FX" ID="49962a40-6bf3-4d67-ae28-184561ec51d1" RefBaseSystemUnitPath="Conceptlib/Fixture">
+            <Attribute Name="Standard" AttributeDataType="xs:string">
+              <Attribute Name="BMW" AttributeDataType="xs:string">
+                <Value>FX</Value>
+              </Attribute>
+              <Attribute Name="Daimler" AttributeDataType="xs:string">
+                <Value>FX_DAI</Value>
+              </Attribute>
+              <Attribute Name="PA" AttributeDataType="xs:string">
+                <Value>FX</Value>
+              </Attribute>
+              <Attribute Name="VW" AttributeDataType="xs:string">
+                <Value>FX_VW</Value>
+              </Attribute>
+            </Attribute>
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+          </InternalElement>
+          <InternalElement Name="ZN" ID="b6da04e8-f23e-44db-a1bc-ebb27b4000c6" RefBaseSystemUnitPath="Processlib/Gun rivet">
+            <Attribute Name="Standard" AttributeDataType="xs:string">
+              <Attribute Name="BMW" AttributeDataType="xs:string">
+                <Value>ZN</Value>
+              </Attribute>
+              <Attribute Name="Daimler" AttributeDataType="xs:string">
+                <Value>ZN_DAI</Value>
+              </Attribute>
+              <Attribute Name="PA" AttributeDataType="xs:string">
+                <Value>ZN</Value>
+              </Attribute>
+              <Attribute Name="VW" AttributeDataType="xs:string">
+                <Value>ZN_VW</Value>
+              </Attribute>
+            </Attribute>
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Technology" />
+          </InternalElement>
+          <InternalElement Name="ZN" ID="5e1048fb-d978-4edd-ab5b-389170c33693" RefBaseSystemUnitPath="Processlib/Gun rivet">
+            <Attribute Name="Standard" AttributeDataType="xs:string">
+              <Attribute Name="BMW" AttributeDataType="xs:string">
+                <Value>ZN</Value>
+              </Attribute>
+              <Attribute Name="Daimler" AttributeDataType="xs:string">
+                <Value>ZN_DAI</Value>
+              </Attribute>
+              <Attribute Name="PA" AttributeDataType="xs:string">
+                <Value>ZN</Value>
+              </Attribute>
+              <Attribute Name="VW" AttributeDataType="xs:string">
+                <Value>ZN_VW</Value>
+              </Attribute>
+            </Attribute>
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Technology" />
+          </InternalElement>
+          <InternalElement Name="CN" ID="2e263dcf-9682-44cb-9abc-4547cd77ee8f" RefBaseSystemUnitPath="Processlib/Riveting process control">
+            <Attribute Name="Standard" AttributeDataType="xs:string">
+              <Attribute Name="BMW" AttributeDataType="xs:string">
+                <Value>CN</Value>
+              </Attribute>
+              <Attribute Name="Daimler" AttributeDataType="xs:string">
+                <Value>CN_DAI</Value>
+              </Attribute>
+              <Attribute Name="PA" AttributeDataType="xs:string">
+                <Value>CN</Value>
+              </Attribute>
+              <Attribute Name="VW" AttributeDataType="xs:string">
+                <Value>CN_VW</Value>
+              </Attribute>
+            </Attribute>
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Technology" />
+          </InternalElement>
+          <InternalElement Name="CN" ID="9d2ed5cb-840f-4408-8870-3c9b155462dc" RefBaseSystemUnitPath="Processlib/Riveting process control">
+            <Attribute Name="Standard" AttributeDataType="xs:string">
+              <Attribute Name="BMW" AttributeDataType="xs:string">
+                <Value>CN</Value>
+              </Attribute>
+              <Attribute Name="Daimler" AttributeDataType="xs:string">
+                <Value>CN_DAI</Value>
+              </Attribute>
+              <Attribute Name="PA" AttributeDataType="xs:string">
+                <Value>CN</Value>
+              </Attribute>
+              <Attribute Name="VW" AttributeDataType="xs:string">
+                <Value>CN_VW</Value>
+              </Attribute>
+            </Attribute>
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+            <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Technology" />
+          </InternalElement>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+        </InternalElement>
+        <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
+      </InternalElement>
+      <InternalElement Name="PA_Station" ID="e4713702-264b-42c7-8dc8-21015b75aff8" RefBaseSystemUnitPath="Conceptlib/Station">
+        <Attribute Name="Standard" AttributeDataType="xs:string">
+          <Attribute Name="BMW" AttributeDataType="xs:string">
+            <Value>BMW_Station</Value>
+          </Attribute>
+          <Attribute Name="Daimler" AttributeDataType="xs:string">
+            <Value>Daimler_Station</Value>
+          </Attribute>
+          <Attribute Name="PA" AttributeDataType="xs:string">
+            <Value>PA_Station</Value>
+          </Attribute>
+          <Attribute Name="VW" AttributeDataType="xs:string">
+            <Value>VW_Station</Value>
+          </Attribute>
+        </Attribute>
+        <InternalElement Name="TL" ID="2c87e901-b517-4c34-8982-1db06cd2e399" RefBaseSystemUnitPath="Conceptlib/Transport">
+          <Attribute Name="Standard" AttributeDataType="xs:string">
+            <Attribute Name="BMW" AttributeDataType="xs:string">
+              <Value>TL</Value>
+            </Attribute>
+            <Attribute Name="Daimler" AttributeDataType="xs:string">
+              <Value>TL_DAI</Value>
+            </Attribute>
+            <Attribute Name="PA" AttributeDataType="xs:string">
+              <Value>TL</Value>
+            </Attribute>
+            <Attribute Name="VW" AttributeDataType="xs:string">
+              <Value>TL_VW</Value>
+            </Attribute>
+          </Attribute>
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Transport" />
+          <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
         </InternalElement>
         <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
       </InternalElement>
@@ -207,9 +765,242 @@
       <RoleClass Name="Transport" />
       <RoleClass Name="Fixture" />
       <RoleClass Name="Centering" />
-      <RoleClass Name="Robot" />
+      <RoleClass Name="Maniplulator" />
       <RoleClass Name="Gripper" />
       <RoleClass Name="Technology" />
     </RoleClass>
   </RoleClassLib>
+  <SystemUnitClassLib Name="Cabinetlib">
+    <Version>0</Version>
+    <SystemUnitClass Name="Cabinet_Control" ID="456ebe9d-ae62-4c80-8d89-d70a86ec05f9">
+      <Attribute Name="Standard" AttributeDataType="xs:string">
+        <Attribute Name="BMW" AttributeDataType="xs:string">
+          <Value>CC</Value>
+        </Attribute>
+        <Attribute Name="Daimler" AttributeDataType="xs:string">
+          <Value>CC_DAI</Value>
+        </Attribute>
+        <Attribute Name="PA" AttributeDataType="xs:string">
+          <Value>CC</Value>
+        </Attribute>
+        <Attribute Name="VW" AttributeDataType="xs:string">
+          <Value>CC_VW</Value>
+        </Attribute>
+      </Attribute>
+      <SupportedRoleClass RefRoleClassPath="PA-StandardRole/Technical/Cabinet" />
+    </SystemUnitClass>
+    <SystemUnitClass Name="Operation Center" ID="08976a0d-1dc4-469d-9f77-975414386e5a">
+      <Attribute Name="Standard" AttributeDataType="xs:string">
+        <Attribute Name="BMW" AttributeDataType="xs:string">
+          <Value>OP</Value>
+        </Attribute>
+        <Attribute Name="Daimler" AttributeDataType="xs:string">
+          <Value>OP_DAI</Value>
+        </Attribute>
+        <Attribute Name="PA" AttributeDataType="xs:string">
+          <Value>OP</Value>
+        </Attribute>
+        <Attribute Name="VW" AttributeDataType="xs:string">
+          <Value>OP_VW</Value>
+        </Attribute>
+      </Attribute>
+      <SupportedRoleClass RefRoleClassPath="PA-StandardRole/Technical/Panel" />
+    </SystemUnitClass>
+    <SystemUnitClass Name="Media Supply" ID="b4c3111f-09f4-4c41-9cd9-ed49ce11a08e">
+      <Attribute Name="Standard" AttributeDataType="xs:string">
+        <Attribute Name="BMW" AttributeDataType="xs:string">
+          <Value>MS</Value>
+        </Attribute>
+        <Attribute Name="Daimler" AttributeDataType="xs:string">
+          <Value>MS_DAI</Value>
+        </Attribute>
+        <Attribute Name="PA" AttributeDataType="xs:string">
+          <Value>MS</Value>
+        </Attribute>
+        <Attribute Name="VW" AttributeDataType="xs:string">
+          <Value>MS_VW</Value>
+        </Attribute>
+      </Attribute>
+      <SupportedRoleClass RefRoleClassPath="PA-StandardRole/Technical/Media" />
+    </SystemUnitClass>
+    <SystemUnitClass Name="Cabinet_Motor Panel" ID="1fb81ce1-8bd9-4dfd-bafa-32c175132ece">
+      <Attribute Name="Standard" AttributeDataType="xs:string">
+        <Attribute Name="BMW" AttributeDataType="xs:string">
+          <Value>CD</Value>
+        </Attribute>
+        <Attribute Name="Daimler" AttributeDataType="xs:string">
+          <Value>CD_DAI</Value>
+        </Attribute>
+        <Attribute Name="PA" AttributeDataType="xs:string">
+          <Value>CD</Value>
+        </Attribute>
+        <Attribute Name="VW" AttributeDataType="xs:string">
+          <Value>CD_VW</Value>
+        </Attribute>
+      </Attribute>
+      <SupportedRoleClass RefRoleClassPath="PA-StandardRole/Technical/Cabinet" />
+    </SystemUnitClass>
+  </SystemUnitClassLib>
+  <SystemUnitClassLib Name="Conceptlib">
+    <Version>0</Version>
+    <SystemUnitClass Name="Station" ID="1d7b770a-314d-427d-8212-b4f04b1aa9e5">
+      <Attribute Name="Standard" AttributeDataType="xs:string">
+        <Attribute Name="BMW" AttributeDataType="xs:string">
+          <Value>BMW_Station</Value>
+        </Attribute>
+        <Attribute Name="Daimler" AttributeDataType="xs:string">
+          <Value>Daimler_Station</Value>
+        </Attribute>
+        <Attribute Name="PA" AttributeDataType="xs:string">
+          <Value>PA_Station</Value>
+        </Attribute>
+        <Attribute Name="VW" AttributeDataType="xs:string">
+          <Value>VW_Station</Value>
+        </Attribute>
+      </Attribute>
+      <SupportedRoleClass RefRoleClassPath="PA-StandardRole/Structur/Station" />
+    </SystemUnitClass>
+    <SystemUnitClass Name="Manipluator" ID="0bd5b7bc-1a70-4025-aac4-0f0aea618b04">
+      <Attribute Name="Standard" AttributeDataType="xs:string">
+        <Attribute Name="BMW" AttributeDataType="xs:string">
+          <Value>IR</Value>
+        </Attribute>
+        <Attribute Name="Daimler" AttributeDataType="xs:string">
+          <Value>IR_DAI</Value>
+        </Attribute>
+        <Attribute Name="PA" AttributeDataType="xs:string">
+          <Value>IR</Value>
+        </Attribute>
+        <Attribute Name="VW" AttributeDataType="xs:string">
+          <Value>IR_VW</Value>
+        </Attribute>
+      </Attribute>
+      <InternalElement Name="Process control robot" ID="defa60bf-8294-4d1c-b08a-12b28b6bf52e">
+        <Attribute Name="Standard" AttributeDataType="xs:string">
+          <Attribute Name="BMW" AttributeDataType="xs:string">
+            <Value>CR</Value>
+          </Attribute>
+          <Attribute Name="Daimler" AttributeDataType="xs:string">
+            <Value>CR_DAI</Value>
+          </Attribute>
+          <Attribute Name="PA" AttributeDataType="xs:string">
+            <Value>CR</Value>
+          </Attribute>
+          <Attribute Name="VW" AttributeDataType="xs:string">
+            <Value>CR_VW</Value>
+          </Attribute>
+        </Attribute>
+        <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Technical/Cabinet" />
+      </InternalElement>
+      <SupportedRoleClass RefRoleClassPath="PA-StandardRole/Technical/Maniplulator" />
+    </SystemUnitClass>
+    <SystemUnitClass Name="Transport" ID="c9165de5-ab0c-4e7f-a75b-d2c799eb4afa">
+      <Attribute Name="Standard" AttributeDataType="xs:string">
+        <Attribute Name="BMW" AttributeDataType="xs:string">
+          <Value>TL</Value>
+        </Attribute>
+        <Attribute Name="Daimler" AttributeDataType="xs:string">
+          <Value>TL_DAI</Value>
+        </Attribute>
+        <Attribute Name="PA" AttributeDataType="xs:string">
+          <Value>TL</Value>
+        </Attribute>
+        <Attribute Name="VW" AttributeDataType="xs:string">
+          <Value>TL_VW</Value>
+        </Attribute>
+      </Attribute>
+      <SupportedRoleClass RefRoleClassPath="PA-StandardRole/Technical/Transport" />
+      <SupportedRoleClass RefRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+    </SystemUnitClass>
+    <SystemUnitClass Name="Fixture" ID="669a87c1-deb9-4a53-9e5e-3eb09896a60c">
+      <Attribute Name="Standard" AttributeDataType="xs:string">
+        <Attribute Name="BMW" AttributeDataType="xs:string">
+          <Value>FX</Value>
+        </Attribute>
+        <Attribute Name="Daimler" AttributeDataType="xs:string">
+          <Value>FX_DAI</Value>
+        </Attribute>
+        <Attribute Name="PA" AttributeDataType="xs:string">
+          <Value>FX</Value>
+        </Attribute>
+        <Attribute Name="VW" AttributeDataType="xs:string">
+          <Value>FX_VW</Value>
+        </Attribute>
+      </Attribute>
+      <SupportedRoleClass RefRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+    </SystemUnitClass>
+    <SystemUnitClass Name="Line" ID="60182dae-01c6-4975-932a-a608c075f022">
+      <Attribute Name="Standard" AttributeDataType="xs:string">
+        <Attribute Name="BMW" AttributeDataType="xs:string">
+          <Value>Line_BMW</Value>
+        </Attribute>
+        <Attribute Name="Daimler" AttributeDataType="xs:string">
+          <Value>Daimler_Line</Value>
+        </Attribute>
+        <Attribute Name="PA" AttributeDataType="xs:string">
+          <Value>PA_Line</Value>
+        </Attribute>
+        <Attribute Name="VW" AttributeDataType="xs:string">
+          <Value>VW_Line</Value>
+        </Attribute>
+      </Attribute>
+      <SupportedRoleClass RefRoleClassPath="PA-StandardRole/Structur/Line" />
+    </SystemUnitClass>
+  </SystemUnitClassLib>
+  <SystemUnitClassLib Name="Processlib">
+    <Version>0</Version>
+    <SystemUnitClass Name="Gun rivet" ID="60a34779-b019-4f92-8af2-54225573d594">
+      <Attribute Name="Standard" AttributeDataType="xs:string">
+        <Attribute Name="BMW" AttributeDataType="xs:string">
+          <Value>ZN</Value>
+        </Attribute>
+        <Attribute Name="Daimler" AttributeDataType="xs:string">
+          <Value>ZN_DAI</Value>
+        </Attribute>
+        <Attribute Name="PA" AttributeDataType="xs:string">
+          <Value>ZN</Value>
+        </Attribute>
+        <Attribute Name="VW" AttributeDataType="xs:string">
+          <Value>ZN_VW</Value>
+        </Attribute>
+      </Attribute>
+      <SupportedRoleClass RefRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+      <SupportedRoleClass RefRoleClassPath="PA-StandardRole/Technical/Technology" />
+    </SystemUnitClass>
+    <SystemUnitClass Name="Riveting process control" ID="672ccbe9-918f-4aa1-96bc-e0d34f40b276">
+      <Attribute Name="Standard" AttributeDataType="xs:string">
+        <Attribute Name="BMW" AttributeDataType="xs:string">
+          <Value>CN</Value>
+        </Attribute>
+        <Attribute Name="Daimler" AttributeDataType="xs:string">
+          <Value>CN_DAI</Value>
+        </Attribute>
+        <Attribute Name="PA" AttributeDataType="xs:string">
+          <Value>CN</Value>
+        </Attribute>
+        <Attribute Name="VW" AttributeDataType="xs:string">
+          <Value>CN_VW</Value>
+        </Attribute>
+      </Attribute>
+      <SupportedRoleClass RefRoleClassPath="PA-StandardRole/Structur/Functiongroup" />
+      <SupportedRoleClass RefRoleClassPath="PA-StandardRole/Technical/Technology" />
+    </SystemUnitClass>
+    <SystemUnitClass Name="Gripper " ID="4c23a1f9-9e3e-43f4-8ef8-687ef7a3a4b4">
+      <Attribute Name="Standard" AttributeDataType="xs:string">
+        <Attribute Name="BMW" AttributeDataType="xs:string">
+          <Value>FG</Value>
+        </Attribute>
+        <Attribute Name="Daimler" AttributeDataType="xs:string">
+          <Value>FG_DAI</Value>
+        </Attribute>
+        <Attribute Name="PA" AttributeDataType="xs:string">
+          <Value>FG</Value>
+        </Attribute>
+        <Attribute Name="VW" AttributeDataType="xs:string">
+          <Value>FG_VW</Value>
+        </Attribute>
+      </Attribute>
+      <SupportedRoleClass RefRoleClassPath="PA-StandardRole/Technical/Gripper" />
+    </SystemUnitClass>
+  </SystemUnitClassLib>
 </CAEXFile>

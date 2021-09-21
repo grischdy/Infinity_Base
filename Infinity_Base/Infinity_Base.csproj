@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <None Remove="turbo.aml" />
+    <None Remove="Upload\turbo - Kopieren.aml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,7 +16,7 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Include="Upload\turbo.aml">
+    <Content Include="Upload\turbo - Kopieren.aml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -35,8 +36,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Upload\" />
+    <Folder Include="wwwroot\Bilder\" />
     <Folder Include="wwwroot\Upload\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Bilder\CX.png" />
+    <None Include="wwwroot\Bilder\IR.png" />
+    <None Include="wwwroot\Bilder\MX.png" />
+    <None Include="wwwroot\Bilder\OX.png" />
   </ItemGroup>
 
 </Project>
