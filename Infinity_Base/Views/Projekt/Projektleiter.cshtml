@@ -1,29 +1,8 @@
-﻿<ul class='nav'>
-    <li>
-        <div class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ansicht</a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <li><a asp-action="Projektleiter" asp-route-id="">Projektleiter</a></li>
-                <li><a asp-action="Hardwarekonstruktion" asp-route-id="">Hardwarekonstruktion</a></li>
-                <li><a asp-action="Softwarekonstruktion" asp-route-id="">Softwarekonstruktion</a></li>
-                <li><a asp-action="Administrator" asp-route-id="">Administrator</a></li>
-            </ul>
-        </div>
-    </li>
-
-    <li>
-        <div class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Funktionen</a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <li><a asp-controller="File" asp-action="FileUpload" asp-route-id="">FileUpload</a></li>
-                <li><a asp-controller="AML" asp-action="Index" asp-route-id="">AML</a></li>
-            </ul>
-        </div>
-    </li>
-</ul>
-
-<h1>Projektleiterseite</h1>
-
+﻿
+<hr />
+<div class="text-center">
+    <h1 class="display-4">Projectview</h1>
+</div>
 <hr />
 
 <form asp-action="CreateEdit">

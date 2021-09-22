@@ -27,27 +27,54 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-black-50" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Functions
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a asp-controller="File" asp-action="FileUpload" asp-route-id="" class="dropdown-item">File Up/Download</a>
+                                <div class="dropdown-divider"></div>
+                                <a asp-controller="Projekt" asp-action="Projektleiter" asp-route-id="" class="dropdown-item">Projectmanagement</a>
+                                <a asp-controller="AML" asp-action="Index" asp-route-id="" class="dropdown-item">Projectview</a>
+                                <div class="dropdown-divider"></div>
+                                <a asp-controller="SystemUnitClassLib" asp-action="Index" asp-route-id="" class="dropdown-item">SystemUnitClassLib</a>
+                                <a class="dropdown-item">RoleLib</a>
+                            </div>
+                        </li>
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
-        <br /> 
-        </header>
+    </header>
+
+    @*// condition to render the navigation menu*@
+    @if (ViewData["NavMenuPage"] != null)
+    {
+        // ASP.NET Core will search for a component named NavMenu,
+        // and invoke it with the provided data (here, the NavMenuPage set in the controller)
+        @await Component.InvokeAsync("NavMenu", ViewData["NavMenuPage"])
+    }
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
+
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2021 - Infinity_Base - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    @*<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>*@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

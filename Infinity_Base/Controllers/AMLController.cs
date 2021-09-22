@@ -46,6 +46,7 @@ namespace Infinity_Base.Controllers
         {
             var myDoc = globals._myglobalDoc;
             ViewBag.myDoc = myDoc;
+            ViewData["NavMenuPage"] = "AML";
             return View();
         }
         

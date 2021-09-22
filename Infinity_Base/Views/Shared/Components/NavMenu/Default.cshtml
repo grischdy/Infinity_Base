@@ -1,0 +1,67 @@
+﻿@model Dictionary<string, string>
+
+<nav>
+    @foreach (var link in Model)
+    {
+        if (@link.Value == "SystemUnitClassLib")
+        {
+
+            <div class="float-left d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 150px;">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-4">Sidebar</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page">
+                            Add Item 1
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page">
+                            Add Item 2
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page">
+                            Add Item 3
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+
+        }
+        if (@link.Value == "AML")
+        {
+
+            <div class="float-left d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 150px;">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-4">Sidebar</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <form asp-action="CreateStation" asp-controller="AML">
+                            <span class="tt" data-bs-placement="bottom" title="It will add an station to the project">
+                                <button type="submit"
+                                        class="btn btn-primary">
+                                    + ST
+                                </button>
+                            </span>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <form asp-action="CreateFunctiongroup" asp-controller="Funtiongroup" asp-route-id="">
+                            <span class="tt" data-bs-placement="bottom" title="It will add an station to the project">
+                                <button type="submit" class="btn btn-primary">+ FG</button>
+                                </span>
+                        </form>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        }
+    }
+</nav>
+

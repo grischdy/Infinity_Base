@@ -1,4 +1,4 @@
-﻿<CAEXFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.dke.de/CAEX" SchemaVersion="3.0" FileName="Daimleranlage_V0.1.aml" xsi:schemaLocation="http://www.dke.de/CAEX CAEX_ClassModel_V.3.0.xsd">
+﻿<CAEXFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.dke.de/CAEX" SchemaVersion="3.0" FileName="turbo.aml" xsi:schemaLocation="http://www.dke.de/CAEX CAEX_ClassModel_V.3.0.xsd">
   <AdditionalInformation AutomationMLVersion="2.0" />
   <SuperiorStandardVersion>AutomationML 2.10</SuperiorStandardVersion>
   <SourceDocumentInformation OriginName="AutomationML Editor" OriginID="916578CA-FE0D-474E-A4FC-9E1719892369" OriginVersion="5.5.4.0" LastWritingDateTime="2021-09-20T14:28:33.0108311+02:00" OriginVendor="AutomationML e.V." OriginVendorURL="www.AutomationML.org" OriginRelease="5.5.4.0" OriginProjectTitle="unspecified" OriginProjectID="unspecified" />
@@ -119,6 +119,7 @@
         </InternalElement>
         <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Station" />
       </InternalElement>
+      <InternalElement Name="TO002" ID="83f71e7f-ff92-415b-8ca1-4449f912888b" />
       <RoleRequirements RefBaseRoleClassPath="PA-StandardRole/Structur/Line" />
     </InternalElement>
   </InstanceHierarchy>
