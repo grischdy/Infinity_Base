@@ -12,19 +12,30 @@
                 </a>
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
+                    <li>
+                        <form asp-action="LoadTree" asp-controller="SystemUnitClassLib">
+                            <span class="tt" data-bs-placement="bottom" title="It will load the AML file in SQL Database">
+                                <button type="submit"
+                                        class="btn btn-primary">
+                                    Load in SQL
+                                </button>
+                            </span>
+                        </form>
+                    </li>
+                    
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page">
-                            Add Item 1
-                        </a>
+                        <form asp-action="DeleteTree" asp-controller="SystemUnitClassLib">
+                            <span class="tt" data-bs-placement="bottom" title="It will delete every data in SQL Database">
+                                <button type="submit"
+                                        class="btn btn-primary">
+                                    Reset SQL
+                                </button>
+                            </span>
+                        </form>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page">
-                            Add Item 2
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page">
-                            Add Item 3
+                            Add Item
                         </a>
                     </li>
                 </ul>

@@ -1,0 +1,92 @@
+﻿@using Aml.Engine.AmlObjects;
+@using Aml.Engine.CAEX;
+@using Aml.Engine.CAEX.Extensions;
+@using Aml.Engine.Services;
+@using Aml.Engine.Xml.Extensions;
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/lib/jstree/dist/jstree.min.js"></script>
+<link rel="stylesheet" href="~/lib/jstree/dist/themes/default/style.min.css" />
+
+
+<div id="jstree">
+    <ul>
+        @{
+            foreach (InstanceHierarchyType ih1 in ViewBag.myDoc.CAEXFile.InstanceHierarchy)
+            {
+                <li data-jstree='{"icon":"//jstree.com/tree.png"}'>
+                    @ih1.Name
+                    @foreach (InternalElementType ih2 in ih1)
+                    {
+                        <ul>
+                            <li>
+                                @ih2.Name
+                                @foreach (InternalElementType ih3 in ih2)
+                                {
+                                    <ul>
+                                        <li>
+                                            @ih3.Name
+                                            <div style="display:none;">@ih3.ID</div>
+                                            @foreach (InternalElementType ih4 in ih3)
+                                            {
+                                                <ul>
+                                                    <li>
+                                                        @ih4.Name
+                                                        <div style="display:none;">@ih4.ID</div>
+                                                        @foreach (InternalElementType ih5 in ih4)
+                                                        {
+                                                            <ul>
+                                                                <li>
+                                                                    @ih5.Name
+                                                                    <div style="display:none;">@ih5.ID</div>
+                                                                </li>
+                                                            </ul>
+                                                        }
+                                                    </li>
+                                                </ul>
+                                            }
+                                        </li>
+                                    </ul>
+                                }
+                            </li>
+                        </ul>
+                    }
+                </li>
+            }
+        }
+    </ul>
+</div>
+
+
+<!-- Gibt das aktuell selektierte Feld aus-->
+
+
+    <div id="event_result" style="margin-top:2em; text-align:center;">
+    </div>
+
+
+
+
+<script type="text/javascript">
+
+    $(function () {
+        $('#jstree')
+            .on('changed.jstree', function (e, data) {
+                var i, j, r = [];
+                for (i = 0, j = data.selected.length; i < j; i++) {
+                    r.push(data.instance.get_node(data.selected[i]).text);
+                }
+                $('#event_result').html('Selected:<br /> ' + r.join(', '));
+                /*$('#event_result').html('');*/
+            })
+            .jstree({
+            "plugins": [
+                "contextmenu", "dnd", "search",
+                "state", "types", "wholerow"
+            ],
+        });
+    });
+</script>
+
+

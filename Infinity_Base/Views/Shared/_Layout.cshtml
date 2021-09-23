@@ -38,7 +38,7 @@
                                 <a asp-controller="AML" asp-action="Index" asp-route-id="" class="dropdown-item">Projectview</a>
                                 <div class="dropdown-divider"></div>
                                 <a asp-controller="SystemUnitClassLib" asp-action="Index" asp-route-id="" class="dropdown-item">SystemUnitClassLib</a>
-                                <a class="dropdown-item">RoleLib</a>
+                                <a asp-controller="RoleLib" asp-action="Index" asp-route-id=""class="dropdown-item">Treeview Playground</a>
                             </div>
                         </li>
                     </ul>
@@ -71,7 +71,10 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jstree/dist/jstree.min.js"></script>
+    <link rel="stylesheet" href="~/lib/jstree/dist/themes/default/style.min.css" />
     <script src="~/js/site.js" asp-append-version="true"></script>
+    
     @*<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
             crossorigin="anonymous"></script>*@
